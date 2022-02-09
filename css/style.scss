@@ -15,7 +15,7 @@ body{
     height: 100vh;
     width: 100%;
 
-    background-color: #1a1a1a;
+    background-color: $blue-dark;
 }
 
 img, svg{
@@ -39,6 +39,7 @@ p{
     line-height: 140%;
 }
 
+@import './partials/spacing';
 @import './partials/layout';
 @import './partials/menu';
 @import './partials/animations';
