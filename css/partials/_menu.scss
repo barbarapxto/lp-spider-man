@@ -10,6 +10,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include responsive(l){
+        max-width: 1200px;
+    }
+
+    @include responsive(s){
+        max-width: 760px;
+    }
 }
 
 .nav-menu{
@@ -30,7 +38,7 @@ header{
         margin-left: 24px;
     }
 
-    @include responsive(){
+    @include responsive(s){
         display: none;
     }
 }
@@ -93,7 +101,7 @@ header{
         }
     }
 
-    @include responsive(){
+    @include responsive(s){
         display: none;
     }
 }
@@ -101,7 +109,7 @@ header{
 .bx{
     display: none;
 
-    @include responsive(){
+    @include responsive(s){
         display: block;
         width: 48px;
         height: 48px;
