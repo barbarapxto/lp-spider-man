@@ -18,6 +18,11 @@ body{
     background-color: $blue-dark;
 }
 
+::selection{
+    color: $white;
+    background-color: $red-dark;
+}
+
 img, svg{
     display: block;
     width: 100%;
@@ -39,6 +44,7 @@ p{
     line-height: 140%;
 }
 
+@import './partials/responsive';
 @import './partials/spacing';
 @import './partials/layout';
 @import './partials/menu';

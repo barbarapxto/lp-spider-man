@@ -29,6 +29,10 @@ header{
     li{
         margin-left: 24px;
     }
+
+    @include responsive(){
+        display: none;
+    }
 }
 
 .nav-link{
@@ -87,5 +91,21 @@ header{
                 transform: translate3d(0, -3, 0);
             }
         }
+    }
+
+    @include responsive(){
+        display: none;
+    }
+}
+
+.bx{
+    display: none;
+
+    @include responsive(){
+        display: block;
+        width: 48px;
+        height: 48px;
+
+        background-color: $white;
     }
 }
