@@ -10,7 +10,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     @include responsive(l){
         max-width: 1200px;
     }
@@ -23,7 +22,7 @@ header{
 .nav-menu{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;   
 }
 
 .logo{
@@ -33,14 +32,36 @@ header{
 .nav-list{
     list-style: none;
     display: flex;
+    transition: .7s ease;
 
     li{
         margin-left: 24px;
     }
 
     @include responsive(s){
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+        z-index: 998;
+        
+        flex-direction: column;
+        background-color: $blue;
+
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        padding: 100px 20px;
+        margin: 0;
+
+        .nav-link{
+            margin-top: 10px;
+        }
     }
+}
+
+.nav-list.active{
+    right: 0;
 }
 
 .nav-link{
@@ -83,7 +104,6 @@ header{
     justify-content: space-between;
     align-items: center;
     
-
     svg{
         cursor: pointer;
         margin-left: 16px;
@@ -106,14 +126,62 @@ header{
     }
 }
 
-.bx{
+.menu-hamburguer{
     display: none;
+    z-index: 999;
+
+    @include responsive(s){
+        display: block;
+    }
+}
+
+.hamburguer{
+    display: none;
+    position: relative;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        width: 70%;
+        height: 8%;
+        border-radius: 6px;
+        background-color: $white;
+        transition: .7s ease;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 60%;
+        right: 15%;
+        width: 50%;
+        height: 8%;
+        border-radius: 6px;
+        background-color: $white;
+        transition: .7s ease;
+    }
 
     @include responsive(s){
         display: block;
         width: 48px;
         height: 48px;
 
-        background-color: $white;
+        border-radius: 6px;
+    }
+}
+
+#chkHamburguer:checked ~ label .hamburguer{
+    
+    &::after{
+        top: 45%;
+        transform: rotate(225deg);
+    }
+
+    &::before{
+        top: 45%;
+        width: 70%;
+        transform: rotate(-225deg);
     }
 }
