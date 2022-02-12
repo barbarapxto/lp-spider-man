@@ -1,4 +1,5 @@
 # lp-spider-man
 Landing Page Spider-Man Mile Morales (Curso frontPUSH)
 
-![Foto da landing page](/projeto-spiderman.png)
+![Gif da landing page](/spiderman-loader.gif)
+![Gif da landing page](/spiderman.gif)
