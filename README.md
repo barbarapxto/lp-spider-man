@@ -20,6 +20,7 @@
 - Javascript
 - <a href="https://micku7zu.github.io/vanilla-tilt.js/" target="_blank">Vanilla Tilt JS</a>
 - <a href="https://cdnjs.com/libraries/gsap/2.1.3" target="_blank">GSAP TweenMax v2.1.3</a>
+- <a href="https://github.com/iconfu/svg-inject" target="_blank">SVG Inject</a>
 
 <br><br>
 <hr>
